@@ -14,16 +14,53 @@ O sistema permite iniciar o jogo, apresentar um menu de opções e encerrar o pr
 ## Instalação
 
 1. Abra o terminal.
-2. Navegue até a pasta do projeto.
+2. Navegue até o arquivo principal.
 3. Execute `npm install readline-sync`.
 
 ## Uso
 
-No terminal, execute:
+No terminal, estando dentro da pasta do projeto, execute:
 
 ```
-node "c:\Users\shiny\Documents\Sistema de BINGO\sistema_de_bingo.js"
+node sistema_de_bingo.js
 ```
+
+## Como contribuir
+
+1. No repositório local, mude para a branch `main`:
+
+```
+git checkout main
+```
+
+2. Atualize sua branch `main` com as mudanças do remoto:
+
+```
+git pull origin main
+```
+
+3. Crie uma nova branch para sua alteração:
+
+```
+git checkout -b nome-da-sua-branch
+```
+
+4. Faça suas modificações no código.
+
+5. Adicione e confirme as mudanças:
+
+```
+git add .
+git commit -m "Descrição da alteração"
+```
+
+6. Envie a branch para o GitHub:
+
+```
+git push origin nome-da-sua-branch
+```
+
+7. Abra um pull request no GitHub da sua branch para `main`, peça revisão aos integrantes do grupo e, após aprovação, faça o merge.
 
 ## Funcionalidades
 
