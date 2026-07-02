@@ -9,3 +9,5 @@ yarn-error.log*
 .vscode/
 .DS_Store
 Thumbs.db
+
+esqueleto_bingo.js
