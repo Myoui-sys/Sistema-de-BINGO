@@ -15,7 +15,7 @@ No terminal, estando dentro da pasta do projeto, execute:
 node sistema_de_bingo.js
 ```
 ## Como contribuir
-Consulte o arquivo [CONTRIBUTING.md](CONTRIBUTING.md) para o passo a passo completo de como contribuir com o projeto pelo GitHub.
+Consulte o arquivo [contribuição_equipe.md](contribuição_equipe) para o passo a passo completo de como contribuir com o projeto pelo GitHub.
 ## Funcionalidades
 - Inicia o sistema e solicita o nome do usuário.
 - Exibe menu com opções de bingo.
