@@ -1,3 +1,13 @@
+// ============================================
+// SISTEMA DE BINGO - PROJETO FINAL UC2
+// Equipe: 3
+// Integrante 1 - Messias Kaynâ
+// Integrante 2 - Wemelly 
+// Integrante 3 - Eduarda Ferreira
+// Integrante 4 - Lucas Leite
+// Integrante 5 - Dacyrrôse Melo
+// ============================================
+
 const readlineSync = require("readline-sync");
 
 function iniciarSistema() {
