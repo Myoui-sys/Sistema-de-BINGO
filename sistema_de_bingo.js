@@ -10,10 +10,15 @@
 
 const readlineSync = require("readline-sync");
 
+// ============================================
+// INTEGRANTE 1 - Estrutura inicial + Menu
+// ============================================
+
 function iniciarSistema() {
   console.log("Bem-vindo ao BINGO da EQUIPE 3 da Turma 130!");
   const nome = readlineSync.question("Qual é o seu nome? ");
   console.log("Olá " + nome + ", vamos iniciar o bingo!");
+
 }
 
 function menuBingo() {
@@ -31,17 +36,17 @@ function menuBingo() {
     const opcao = readlineSync.questionInt("Selecione uma opção: ");
 
     if (opcao === 1) {
-      console.log("1 - Sortear número");
+      sortearNumero();
     } else if (opcao === 2) {
-      console.log("2 - Ver números");
+      mostrarOrdenados();
     } else if (opcao === 3) {
-      console.log("3 - Ver números sorteados");
+      mostrarHistorico();
     } else if (opcao === 4) {
-      console.log("4 - Pesquisar número ");
+      pesquisarNumero();
     } else if (opcao === 5) {
-      console.log("5 - Registro do sistema");
+      mostrarRegistroSistema();
     } else if (opcao === 6) {
-      console.log("6 - Reiniciar bingo");
+      reiniciarBingo();
     } else if (opcao === 7) {
       continuar = false;
       console.log("Encerrando sistema...");
