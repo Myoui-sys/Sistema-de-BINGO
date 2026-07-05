@@ -26,7 +26,7 @@ function menuBingo() {
   while (continuar) {
     console.log("Menu Bingo");
     console.log("1 - Sortear número");
-    console.log("2 - Ver números");
+    console.log("2 - Ver números sorteados em ordem crescente");
     console.log("3 - Ver números sorteados");
     console.log("4 - Pesquisar número ");
     console.log("5 - Registro do sistema");
@@ -85,7 +85,36 @@ function sortearNumero() {
   console.log("Número sorteado: " + numeroSorteado);
 }
 
+function mostrarHistorico() {
+  console.log(bingo.numerosSorteados);
+}
+
+function mostrarOrdenados() {
+  console.log(bingo.numerosSorteados.sort((a, b) => a - b));
+}
+
+function pesquisarNumero() {
+  const entradaNumero = readlineSync.questionInt("Informe o numero: ");
+
+  for (let numeroEncontrado of bingo.numerosSorteados) {
+    if (encontrarNumero === entradaNumero) {
+      console.log("Número já sorteado");
+    } else {
+      console.log("Número ainda disponível para sorteio")
+    }
+  }
+}
+
+function mostrarRegistroSistema() {
+  console.log(
+    "Quantidade de numeros disponiveis: " + bingo.numerosDisponiveis.length,
+  );
+  console.log(
+    "Quantidade de numeros sorteados: " + bingo.numerosSorteados.length,
+  );
+  console.log("Ultimo numero sorteado: " + bingo.ultimoNumero);
+}
+
 
 iniciarSistema();
-console.log("");
 menuBingo();
