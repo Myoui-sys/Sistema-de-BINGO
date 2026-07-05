@@ -21,8 +21,6 @@ function iniciarSistema() {
   console.log("Numeros disponiveis: " + popularNumerosDisponiveis());
 }
 
-console.log("");
-
 function menuBingo() {
   let continuar = true;
   while (continuar) {
@@ -89,4 +87,5 @@ function sortearNumero() {
 
 
 iniciarSistema();
+console.log("");
 menuBingo();
