@@ -9,14 +9,10 @@ const NUMERO_MINIMO = 1;
 const NUMERO_MAXIMO = 75;
 
 let bingo = {
-  numerosDisponiveis: [], 
+  numerosDisponiveis: [], // vetor com os números que ainda podem ser sorteados
   numerosSorteados: [],   
-  ultimoNumero: null      
+  ultimoNumero: null       
 };
-
-// ================================================
-// 1 - Messias: Estrutura inicial + Menu
-// ================================================
 
 function iniciarSistema() {
   console.log("Bem-vindo ao BINGO da EQUIPE 3 da Turma 130!");
@@ -62,10 +58,6 @@ function menuBingo() {
   }
 }
 
-// ==========================================================
-// 2 - Dacy: Popular números disponíveis + Reiniciar o bingo
-// ==========================================================
-
 function popularNumerosDisponiveis() {
   for (let i = NUMERO_MINIMO; i <= NUMERO_MAXIMO; i++) {
     bingo.numerosDisponiveis.push(i);
@@ -80,6 +72,20 @@ function reiniciarBingo() {
   bingo.ultimoNumero = null;
 }
 
+function sortearNumero() {
+  if (bingo.numerosDisponiveis.length === 0) {
+    console.log("Todos os números já foram sorteados");
+    return;
+  }
+
+  let sorteioNumero = Math.floor(Math.random() * bingo.numerosDisponiveis.length);
+  let numeroSorteado = bingo.numerosDisponiveis.splice(sorteioNumero, 1)[0];
+
+  bingo.numerosSorteados.push(numeroSorteado);
+  bingo.ultimoNumero = numeroSorteado;
+
+  console.log("Número sorteado: " + numeroSorteado);
+}
 
 
 iniciarSistema();
