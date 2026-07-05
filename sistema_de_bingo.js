@@ -1,25 +1,31 @@
 // ============================================
 // SISTEMA DE BINGO - PROJETO FINAL UC2
 // Equipe: 3
-// Integrante 1 - Messias Kaynâ
-// Integrante 2 - Wemelly 
-// Integrante 3 - Eduarda Ferreira
-// Integrante 4 - Lucas Leite
-// Integrante 5 - Dacyrrôse Melo
 // ============================================
 
 const readlineSync = require("readline-sync");
 
-// ============================================
-// INTEGRANTE 1 - Estrutura inicial + Menu
-// ============================================
+const NUMERO_MINIMO = 1;
+const NUMERO_MAXIMO = 75;
+
+let bingo = {
+  numerosDisponiveis: [], 
+  numerosSorteados: [],   
+  ultimoNumero: null      
+};
+
+// ================================================
+// 1 - Messias: Estrutura inicial + Menu
+// ================================================
 
 function iniciarSistema() {
   console.log("Bem-vindo ao BINGO da EQUIPE 3 da Turma 130!");
   const nome = readlineSync.question("Qual é o seu nome? ");
   console.log("Olá " + nome + ", vamos iniciar o bingo!");
-
+  console.log("Numeros disponiveis: " + popularNumerosDisponiveis());
 }
+
+console.log("");
 
 function menuBingo() {
   let continuar = true;
@@ -55,6 +61,26 @@ function menuBingo() {
     }
   }
 }
+
+// ==========================================================
+// 2 - Dacy: Popular números disponíveis + Reiniciar o bingo
+// ==========================================================
+
+function popularNumerosDisponiveis() {
+  for (let i = NUMERO_MINIMO; i <= NUMERO_MAXIMO; i++) {
+    bingo.numerosDisponiveis.push(i);
+  }
+  return bingo.numerosDisponiveis;
+}
+
+function reiniciarBingo() {
+  bingo.numerosDisponiveis.splice(0, bingo.numerosDisponiveis.length);
+  bingo.numerosSorteados.splice(0, bingo.numerosSorteados.length);
+  popularNumerosDisponiveis();
+  bingo.ultimoNumero = null;
+}
+
+
 
 iniciarSistema();
 menuBingo();
