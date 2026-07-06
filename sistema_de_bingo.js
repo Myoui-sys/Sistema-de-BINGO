@@ -91,6 +91,7 @@ function mostrarHistorico() { // Função para mostrar o histórico de números 
 function mostrarOrdenados() {
   let copiaNumerosSorteados = bingo.numerosSorteados.slice(); // cria uma cópia do vetor de números sorteados
   copiaNumerosSorteados.sort((a, b) => a - b);
+  console.log(copiaNumerosSorteados); // exibe o vetor de números sorteados em ordem crescente
 }
 
 function pesquisarNumero() {
