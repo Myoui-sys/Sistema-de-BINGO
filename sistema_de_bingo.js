@@ -128,4 +128,5 @@ function mostrarRegistroSistema() { // Função para mostrar o registro do siste
 
 
 iniciarSistema(); // chama a função para iniciar o sistema
+popularNumerosDisponiveis(); // chama a função para popular o vetor de números disponíveis
 menuBingo(); // chama a função para exibir o menu do bingo
