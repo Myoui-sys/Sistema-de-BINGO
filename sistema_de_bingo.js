@@ -18,7 +18,6 @@ function iniciarSistema() {
   console.log("Bem-vindo ao BINGO da EQUIPE 3 da Turma 130!");
   const nome = readlineSync.question("Qual é o seu nome? ");
   console.log("Olá " + nome + ", vamos iniciar o bingo!");
-  console.log("Numeros disponiveis: " + popularNumerosDisponiveis());
 }
 
 function menuBingo() {
@@ -95,14 +94,20 @@ function mostrarOrdenados() {
 
 function pesquisarNumero() {
   const entradaNumero = readlineSync.questionInt("Informe o numero: ");
-
+  let encontrado = false;
   for (let numeroEncontrado of bingo.numerosSorteados) {
-    if (encontrarNumero === entradaNumero) {
-      console.log("Número já sorteado");
-    } else {
-      console.log("Número ainda disponível para sorteio")
+    if (numeroEncontrado === entradaNumero) {
+      encontrado = true;
     }
   }
+
+  if (encontrado) {
+  console.log("Esse número já foi sorteado!");
+  } else {
+  console.log("Esse número ainda não foi sorteado.");
+}
+
+
 }
 
 function mostrarRegistroSistema() {
