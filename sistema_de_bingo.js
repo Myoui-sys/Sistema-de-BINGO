@@ -95,6 +95,12 @@ function mostrarOrdenados() {
 
 function pesquisarNumero() {
   const entradaNumero = readlineSync.questionInt("Informe o numero: "); 
+
+  if (entradaNumero < NUMERO_MINIMO || entradaNumero > NUMERO_MAXIMO) { // verifica se o número informado está dentro do intervalo permitido
+    console.log("Número inválido! Informe um número entre " + NUMERO_MINIMO + " e " + NUMERO_MAXIMO);
+    return; // encerra a função se o número for inválido
+  }
+  
   let encontrado = false; // variável de controle para verificar se o número foi encontrado
   for (let numeroEncontrado of bingo.numerosSorteados) { // percorre o vetor de números sorteados
     if (numeroEncontrado === entradaNumero) { // verifica se o número informado pelo usuário está no vetor de números sorteados
